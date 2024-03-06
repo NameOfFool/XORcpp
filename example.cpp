@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
-// #include <windows.h>
+#include <windows.h>
 
 using namespace std;
 
@@ -42,8 +42,8 @@ int main(){
   #elif _WIN32
       setlocale(LC_ALL, "Russian");
   #endif
-  // SetConsoleOutputCP(1251);
-  // SetConsoleCP(1251);
+  SetConsoleOutputCP(1251);
+  SetConsoleCP(1251);
   wstring message;
   wstring key;
   wcout << L"Введите сообщение:";
@@ -54,6 +54,6 @@ int main(){
   vector<int> d = encryption(e, key);
   wcout << L"Шифр:" << output(e) <<endl;
   wcout << L"Расшифровка:" << output(d) << endl;
-  // system("pause");
+  system("pause");
   return 0;
 }
